@@ -1,10 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Personal Site</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brian Becker - Resume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .highlight {
+      background-color: #e0f7fa;
+      padding: 0.5rem;
+      border-left: 4px solid #00796b;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .mono {
+      font-family: monospace;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <p>This is my GitHub Pages website.</p>
+
+  <h1>Brian Becker</h1>
+  <p><strong>Computer Engineering @ Purdue University</strong> | GPA: 3.67</p>
+
+  <div class="section">
+    <h2>📌 Technical Skills</h2>
+    <div class="grid">
+      <div>
+        <strong>Languages:</strong> Java, Python (NumPy, pandas), R, SQL, MATLAB<br>
+        <strong>Tools:</strong> Git, VS Code, Eclipse, Excel, Tableau<br>
+        <strong>Certifications:</strong> Google Data Analytics (Coursera)
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🎯 Key Projects</h2>
+    <div class="highlight">
+      <strong>College Major EDA (Python):</strong> Visualized salary and employment trends across U.S. college majors using pandas, seaborn, and Tableau.
+    </div>
+    <div class="highlight">
+      <strong>Salary Predictor App:</strong> Created a Tkinter GUI to predict salaries from CSV data using Matplotlib.
+    </div>
+    <div class="highlight">
+      <strong>Java Applications:</strong> Developed 3 Java apps including a group collaboration tool and 14 individual mini-projects.
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>💼 Experience</h2>
+    <p><strong>Consult Your Community – Purdue Chapter</strong> <br>
+    <em>Business Analyst (Jan 2025 – Present)</em></p>
+    <ul>
+      <li>Revamped nonprofit website with improved UX/UI and SEO</li>
+      <li>Integrated Facebook feed, iCalendar, and partner sections</li>
+    </ul>
+
+    <p><strong>Centercourt Club and Sports</strong> <br>
+    <em>Tennis Instructor (Jun 2021 – Aug 2024)</em></p>
+    <ul>
+      <li>Led youth tennis classes; developed strong communication and leadership skills</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🏆 Awards & Activities</h2>
+    <ul>
+      <li><strong>Purdue PIVOT Challenge (2nd Place):</strong> Finalist in entrepreneurship pitch competition</li>
+      <li><strong>IEEE Purdue:</strong> Active member; participated in workshops on AI and computing systems</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🎓 Education</h2>
+    <p><strong>Purdue University, Honors College</strong> (Aug 2024 – May 2028)<br>
+    B.S. in Computer Engineering</p>
+    <p><strong>Relevant Coursework:</strong> CS-18000 (Java), ENGR-13000 (MATLAB, Python, Excel)</p>
+  </div>
+
 </body>
 </html>
