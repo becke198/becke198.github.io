@@ -10,6 +10,17 @@
     body {
       font-family: 'Space Grotesk', sans-serif;
     }
+
+    .floating-section {
+      transform: translateY(40px);
+      opacity: 0;
+      transition: all 0.6s ease-in-out;
+    }
+
+    .floating-section.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
   </style>
 </head>
 <body class="bg-white text-gray-900 scroll-smooth">
@@ -29,7 +40,7 @@
   </header>
 
   <!-- Hero -->
-  <section class="h-screen flex items-center justify-center text-center px-4 pt-24">
+  <section class="h-screen flex items-center justify-center text-center px-4 pt-24 floating-section">
     <div>
       <h2 class="text-5xl font-bold mb-4">Hi, I'm Brian Becker</h2>
       <p class="text-lg text-gray-600">Computer Engineering @ Purdue University | GPA: 3.67</p>
@@ -37,7 +48,7 @@
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="py-20 bg-gray-100">
+  <section id="skills" class="py-20 bg-gray-100 floating-section">
     <div class="max-w-4xl mx-auto px-4">
       <h3 class="text-3xl font-semibold mb-6">📌 Technical Skills</h3>
       <div class="grid md:grid-cols-2 gap-4">
@@ -49,7 +60,7 @@
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="py-20">
+  <section id="projects" class="py-20 floating-section">
     <div class="max-w-4xl mx-auto px-4">
       <h3 class="text-3xl font-semibold mb-6">🎯 Key Projects</h3>
       <div class="grid md:grid-cols-2 gap-6">
@@ -70,7 +81,7 @@
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="py-20 bg-gray-100">
+  <section id="experience" class="py-20 bg-gray-100 floating-section">
     <div class="max-w-4xl mx-auto px-4">
       <h3 class="text-3xl font-semibold mb-6">💼 Experience</h3>
       <div class="mb-6">
@@ -92,7 +103,7 @@
   </section>
 
   <!-- Awards -->
-  <section id="awards" class="py-20">
+  <section id="awards" class="py-20 floating-section">
     <div class="max-w-4xl mx-auto px-4">
       <h3 class="text-3xl font-semibold mb-6">🏆 Awards & Activities</h3>
       <ul class="list-disc list-inside text-gray-700">
@@ -103,7 +114,7 @@
   </section>
 
   <!-- Education -->
-  <section id="education" class="py-20 bg-gray-100">
+  <section id="education" class="py-20 bg-gray-100 floating-section">
     <div class="max-w-4xl mx-auto px-4">
       <h3 class="text-3xl font-semibold mb-6">🎓 Education</h3>
       <p><strong>Purdue University, Honors College</strong> (Aug 2024 – May 2028)<br />
@@ -116,6 +127,20 @@
   <footer class="py-6 text-center text-sm text-gray-500">
     &copy; 2025 Brian Becker. All rights reserved.
   </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.floating-section').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
 
 </body>
 </html>
