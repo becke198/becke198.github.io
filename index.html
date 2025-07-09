@@ -90,7 +90,19 @@
     <div class="max-w-4xl mx-auto px-4">
       <h3 class="text-5xl font-bold mb-12 glow-heading">🎯 Key Projects</h3>
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-white p-6 rounded-lg shadow">
+        <style>
+          .card-animate {
+            transform: translateY(40px);
+            opacity: 0;
+            transition: all 0.8s ease-in-out;
+          }
+
+          .card-animate.visible {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        </style>
+        <div class="bg-white p-6 rounded-lg shadow card-animate">
           <h4 class="text-3xl font-bold text-yellow-300">College Major EDA (Python)</h4>
           <p class="text-gray-600">Visualized salary and employment trends using pandas, seaborn, and Tableau.</p>
           <a href="$1"$2class="$3 glow-button">View on GitHub</a>
@@ -172,7 +184,7 @@
       });
     }, { threshold: 0.15 });
 
-    document.querySelectorAll('.floating-section').forEach(el => {
+    document.querySelectorAll('.floating-section, .card-animate').forEach(el => {
       observer.observe(el);
     });
   </script>
