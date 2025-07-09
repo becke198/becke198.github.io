@@ -4,135 +4,118 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Brian Becker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      background: #fafafa;
-      margin: 0;
-      padding: 2rem;
-      color: #2e2e2e;
-      line-height: 1.6;
-    }
-    
-
-    h1 {
-      font-size: 2.5rem;
-      color: #1a1a1a;
-      margin-bottom: 0.25rem;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      color: #333;
-    }
-
-    p, li {
-      font-size: 1rem;
-    }
-
-    .section {
-      margin-bottom: 2rem;
-    }
-
-    .highlight {
-      background: #eef7fa;
-      border-left: 4px solid #00acc1;
-      padding: 0.75rem 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-    }
-
-    ul {
-      margin-top: 0.5rem;
-      padding-left: 1.25rem;
-    }
-
-    li {
-      margin-bottom: 0.5rem;
-    }
-
-    strong {
-      color: #1a237e;
-    }
-
-    em {
-      color: #555;
+      font-family: 'Space Grotesk', sans-serif;
     }
   </style>
 </head>
-<body>
+<body class="bg-white text-gray-900 scroll-smooth">
 
-   <h1>Brian Becker</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <h1>Brian Becker</h1>
-  <p><strong>Computer Engineering @ Purdue University</strong> | GPA: 3.67</p>
+  <!-- Navigation -->
+  <header class="fixed top-0 left-0 w-full bg-white border-b z-50">
+    <nav class="max-w-5xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold">Brian Becker</h1>
+      <ul class="flex space-x-6 text-sm">
+        <li><a href="#skills" class="hover:underline">Skills</a></li>
+        <li><a href="#projects" class="hover:underline">Projects</a></li>
+        <li><a href="#experience" class="hover:underline">Experience</a></li>
+        <li><a href="#awards" class="hover:underline">Awards</a></li>
+        <li><a href="#education" class="hover:underline">Education</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="section">
-    <h2>📌 Technical Skills</h2>
-    <div class="grid">
-      <div>
+  <!-- Hero -->
+  <section class="h-screen flex items-center justify-center text-center px-4 pt-24">
+    <div>
+      <h2 class="text-5xl font-bold mb-4">Hi, I'm Brian Becker</h2>
+      <p class="text-lg text-gray-600">Computer Engineering @ Purdue University | GPA: 3.67</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-20 bg-gray-100">
+    <div class="max-w-4xl mx-auto px-4">
+      <h3 class="text-3xl font-semibold mb-6">📌 Technical Skills</h3>
+      <div class="grid md:grid-cols-2 gap-4">
         <p><strong>Languages:</strong> Java, Python (NumPy, pandas), R, SQL, MATLAB</p>
         <p><strong>Tools:</strong> Git, VS Code, Eclipse, Excel, Tableau</p>
         <p><strong>Certifications:</strong> Google Data Analytics (Coursera)</p>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section">
-    <h2>🎯 Key Projects</h2>
-    <div class="highlight">
-      <strong>College Major EDA (Python):</strong> Visualized salary and employment trends across U.S. college majors using pandas, seaborn, and Tableau.
+  <!-- Projects -->
+  <section id="projects" class="py-20">
+    <div class="max-w-4xl mx-auto px-4">
+      <h3 class="text-3xl font-semibold mb-6">🎯 Key Projects</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="text-xl font-bold">College Major EDA (Python)</h4>
+          <p class="text-gray-600">Visualized salary and employment trends using pandas, seaborn, and Tableau.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="text-xl font-bold">Salary Predictor App</h4>
+          <p class="text-gray-600">Created a Tkinter GUI to predict salaries from CSV data using Matplotlib.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="text-xl font-bold">Java Applications</h4>
+          <p class="text-gray-600">Developed 3 Java apps including a group collaboration tool and 14 mini-projects.</p>
+        </div>
+      </div>
     </div>
-    <div class="highlight">
-      <strong>Salary Predictor App:</strong> Created a Tkinter GUI to predict salaries from CSV data using Matplotlib.
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-20 bg-gray-100">
+    <div class="max-w-4xl mx-auto px-4">
+      <h3 class="text-3xl font-semibold mb-6">💼 Experience</h3>
+      <div class="mb-6">
+        <h4 class="text-xl font-bold">Consult Your Community – Purdue Chapter</h4>
+        <p class="text-sm text-gray-600 italic">Business Analyst (Jan 2025 – Present)</p>
+        <ul class="list-disc list-inside text-gray-700">
+          <li>Revamped nonprofit website with improved UX/UI and SEO</li>
+          <li>Integrated Facebook feed, iCalendar, and partner sections</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold">Centercourt Club and Sports</h4>
+        <p class="text-sm text-gray-600 italic">Tennis Instructor (Jun 2021 – Aug 2024)</p>
+        <ul class="list-disc list-inside text-gray-700">
+          <li>Led youth tennis classes; developed strong communication and leadership skills</li>
+        </ul>
+      </div>
     </div>
-    <div class="highlight">
-      <strong>Java Applications:</strong> Developed 3 Java apps including a group collaboration tool and 14 individual mini-projects.
+  </section>
+
+  <!-- Awards -->
+  <section id="awards" class="py-20">
+    <div class="max-w-4xl mx-auto px-4">
+      <h3 class="text-3xl font-semibold mb-6">🏆 Awards & Activities</h3>
+      <ul class="list-disc list-inside text-gray-700">
+        <li><strong>Purdue PIVOT Challenge (2nd Place):</strong> Finalist in entrepreneurship pitch competition</li>
+        <li><strong>IEEE Purdue:</strong> Active member; participated in workshops on AI and computing systems</li>
+      </ul>
     </div>
-  </div>
+  </section>
 
-  <div class="section">
-    <h2>💼 Experience</h2>
-    <p><strong>Consult Your Community – Purdue Chapter</strong><br>
-    <em>Business Analyst (Jan 2025 – Present)</em></p>
-    <ul>
-      <li>Revamped nonprofit website with improved UX/UI and SEO</li>
-      <li>Integrated Facebook feed, iCalendar, and partner sections</li>
-    </ul>
+  <!-- Education -->
+  <section id="education" class="py-20 bg-gray-100">
+    <div class="max-w-4xl mx-auto px-4">
+      <h3 class="text-3xl font-semibold mb-6">🎓 Education</h3>
+      <p><strong>Purdue University, Honors College</strong> (Aug 2024 – May 2028)<br />
+      B.S. in Computer Engineering</p>
+      <p><strong>Relevant Coursework:</strong> CS-18000 (Java), ENGR-13000 (MATLAB, Python, Excel)</p>
+    </div>
+  </section>
 
-    <p><strong>Centercourt Club and Sports</strong><br>
-    <em>Tennis Instructor (Jun 2021 – Aug 2024)</em></p>
-    <ul>
-      <li>Led youth tennis classes; developed strong communication and leadership skills</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>🏆 Awards & Activities</h2>
-    <ul>
-      <li><strong>Purdue PIVOT Challenge (2nd Place):</strong> Finalist in entrepreneurship pitch competition</li>
-      <li><strong>IEEE Purdue:</strong> Active member; participated in workshops on AI and computing systems</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>🎓 Education</h2>
-    <p><strong>Purdue University, Honors College</strong> (Aug 2024 – May 2028)<br>
-    B.S. in Computer Engineering</p>
-    <p><strong>Relevant Coursework:</strong> CS-18000 (Java), ENGR-13000 (MATLAB, Python, Excel)</p>
-  </div>
+  <!-- Footer -->
+  <footer class="py-6 text-center text-sm text-gray-500">
+    &copy; 2025 Brian Becker. All rights reserved.
+  </footer>
 
 </body>
 </html>
