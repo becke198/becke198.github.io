@@ -30,9 +30,7 @@
 
     
 
-    .glow-heading {
-      text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
-    }
+    
 
     .glow-button {
       box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
@@ -41,9 +39,23 @@
     .glow-button:hover {
       box-shadow: 0 0 15px #FFA500, 0 0 25px #FFA500;
     }
-</style>
+    .glow-button {
+      box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .glow-button:hover {
+      box-shadow: 0 0 15px #FFA500, 0 0 25px #FFA500;
+      transform: translateY(-3px) scale(1.03);
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-900 scroll-smooth">
+<body class="bg-white text-gray-900 scroll-smooth relative overflow-hidden">
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+    <source src="background.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div class="relative z-10">
 
   <!-- Navigation -->
   <header class="fixed top-0 left-0 w-full bg-white border-b border-b z-50">
@@ -70,7 +82,7 @@
   <!-- Skills -->
   <section id="skills" class="py-32 bg-white floating-section">
     <div class="max-w-4xl mx-auto px-4">
-      <h3 class="text-5xl font-bold mb-12 glow-heading">📌 Technical Skills</h3>
+      <h3 class="text-5xl font-bold mb-12">📌 Technical Skills</h3>
       <div class="grid md:grid-cols-2 gap-4">
         <p><strong>Languages:</strong> Java, Python (NumPy, pandas), R, SQL, MATLAB</p>
         <p><strong>Tools:</strong> Git, VS Code, Eclipse, Excel, Tableau</p>
@@ -82,7 +94,7 @@
   <!-- Projects -->
   <section id="projects" class="py-32 floating-section">
     <div class="max-w-4xl mx-auto px-4">
-      <h3 class="text-5xl font-bold mb-12 glow-heading">🎯 Key Projects</h3>
+      <h3 class="text-5xl font-bold mb-12">🎯 Key Projects</h3>
       <div class="grid md:grid-cols-2 gap-6">
         <style>
           .card-animate {
@@ -99,12 +111,12 @@
         <div class="bg-white p-6 rounded-lg shadow card-animate">
           <h4 class="text-3xl font-bold text-gray-800">College Major EDA (Python)</h4>
           <p class="text-gray-700">Visualized salary and employment trends using pandas, seaborn, and Tableau.</p>
-          <a href="https://github.com/becke198/college-majors-eda" target="_blank" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition">View on GitHub</a>
+          <a href="https://github.com/becke198/college-majors-eda" target="_blank" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition glow-button">View on GitHub</a>
         </div>
         <div class="bg-white p-6 rounded-lg shadow">
           <h4 class="text-2xl font-semibold text-gray-800">Salary Predictor App</h4>
           <p class="text-gray-600">Created a Tkinter GUI to predict salaries from CSV data using Matplotlib.</p>
-          <a href="https://github.com/becke198/College-Salary-Predictor/blob/main/README.md" target="_blank" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition">View on GitHub</a>
+          <a href="https://github.com/becke198/College-Salary-Predictor/blob/main/README.md" target="_blank" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition glow-button">View on GitHub</a>
         </div>
         <div class="bg-white p-6 rounded-lg shadow">
           <h4 class="text-xl font-bold text-gray-800">Java Applications</h4>
@@ -183,5 +195,6 @@
     });
   </script>
 
+  </div>
 </body>
 </html>
