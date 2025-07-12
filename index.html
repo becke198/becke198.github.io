@@ -12,38 +12,19 @@
       font-weight: 400;
       letter-spacing: -0.01em;
     }
-
     .floating-section {
       transform: translateY(40px);
       opacity: 0;
       transition: all 0.8s ease-in-out;
     }
-
     .floating-section.visible {
       transform: translateY(0);
       opacity: 1;
-    }
-
-    
-
-    
-
-    
-
-    
-
-    .glow-button {
-      box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
-    }
-
-    .glow-button:hover {
-      box-shadow: 0 0 15px #FFA500, 0 0 25px #FFA500;
     }
     .glow-button {
       box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
       transition: all 0.3s ease-in-out;
     }
-
     .glow-button:hover {
       box-shadow: 0 0 15px #FFA500, 0 0 25px #FFA500;
       transform: translateY(-3px) scale(1.03);
@@ -51,137 +32,149 @@
   </style>
 </head>
 <body class="bg-white text-gray-900 scroll-smooth relative">
-  
   <div class="relative z-10">
+    <!-- Navigation -->
+    <header class="sticky top-0 bg-white shadow z-50">
+      <nav class="max-w-5xl mx-auto flex justify-between items-center p-4">
+        <h1 class="text-2xl md:text-3xl font-bold tracking-tight">Andrew Becker</h1>
+        <ul class="flex space-x-6 text-sm">
+          <li><a href="#skills" class="hover:underline">Skills</a></li>
+          <li><a href="#projects" class="hover:underline">Projects</a></li>
+          <li><a href="#experience" class="hover:underline">Experience</a></li>
+          <li><a href="#awards" class="hover:underline">Awards</a></li>
+          <li><a href="#education" class="hover:underline">Education</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <!-- Navigation -->
-  <header class="fixed top-0 left-0 w-full bg-white border-b border-b z-50">
-    <nav class="max-w-5xl mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl md:text-3xl font-bold tracking-tight">Andrew Becker</h1>
-      <ul class="flex space-x-6 text-sm">
-        <li><a href="#skills" class="hover:underline">Skills</a></li>
-        <li><a href="#projects" class="hover:underline">Projects</a></li>
-        <li><a href="#experience" class="hover:underline">Experience</a></li>
-        <li><a href="#awards" class="hover:underline">Awards</a></li>
-        <li><a href="#education" class="hover:underline">Education</a></li>
-      </ul>
-    </nav>
-  </header>
-
- <!-- Hero -->
-<section class="min-h-[80vh] flex items-center justify-center text-center px-4 pt-32 floating-section">
-  <div class="flex flex-col md:flex-row items-center justify-center gap-10 max-w-5xl mx-auto px-4">
-    <img src="andrew.jpg" alt="Andrew Becker" class="w-48 h-48 md:w-56 md:h-56 rounded-full shadow-xl object-cover border-4 border-white" />
-    <div class="text-center md:text-left">
-      <h2 class="text-5xl md:text-6xl font-bold tracking-tight mb-4 leading-tight">Hi, I'm Andrew Becker</h2>
-      <p class="text-lg text-gray-700">Computer Engineering @ Purdue University | GPA: 3.67</p>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Skills -->
-  <section id="skills" class="py-32 bg-white floating-section">
-    <div class="max-w-4xl mx-auto px-4">
-      <h3 class="text-5xl font-bold mb-12">📌 Technical Skills</h3>
-      <div class="grid md:grid-cols-2 gap-4">
-        <p><strong>Languages:</strong> Java, Python (NumPy, pandas), R, SQL, MATLAB</p>
-        <p><strong>Tools:</strong> Git, VS Code, Eclipse, Excel, Tableau</p>
-        <p><strong>Certifications:</strong> Google Data Analytics (Coursera)</p>
+    <!-- Hero -->
+    <section class="min-h-[80vh] flex items-center justify-center text-center px-4 pt-32 floating-section">
+      <div class="flex flex-col md:flex-row items-center justify-center gap-10 max-w-5xl mx-auto px-4">
+        <img src="andrew.jpg" alt="Andrew Becker" class="w-48 h-48 md:w-56 md:h-56 rounded-full shadow-xl object-cover border-4 border-white" />
+        <div class="text-center md:text-left">
+          <h2 class="text-5xl md:text-6xl font-bold tracking-tight mb-4 leading-tight">Hi, I'm Andrew Becker</h2>
+          <p class="text-lg text-gray-700">Computer Engineering @ Purdue University | GPA: 3.67</p>
+          <p class="text-md text-gray-600 mt-4">I'm passionate about applying data-driven thinking to solve real-world problems in tech. Currently seeking Summer 2025 internships in Data Science, Machine Learning, or Software Engineering.</p>
+          <div class="flex space-x-4 justify-center md:justify-start mt-4">
+            <a href="https://linkedin.com/in/yourhandle" target="_blank"><img src="linkedin.svg" alt="LinkedIn" class="w-6 h-6"></a>
+            <a href="https://github.com/becke198" target="_blank"><img src="github.svg" alt="GitHub" class="w-6 h-6"></a>
+            <a href="/resume.pdf" download class="text-blue-600 underline text-sm mt-1">Download PDF Resume</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-<!-- Projects -->
-<section id="projects" class="py-32 floating-section">
-  <div class="max-w-4xl mx-auto px-4">
-    <h3 class="text-5xl font-bold mb-12">🎯 Key Projects</h3>
-    <div class="grid md:grid-cols-2 gap-6">
-      <a href="https://github.com/becke198/college-majors-eda" target="_blank" class="block bg-white p-6 rounded-lg shadow card-animate transition-all duration-300 transform hover:scale-105 glow-button">
-        <h4 class="text-2xl font-semibold text-gray-800">College Major EDA (Python)</h4>
-        <p class="text-gray-600">Visualized salary and employment trends using pandas, seaborn, and Tableau. Explored correlations between major selection, income, and employability using public labor datasets.</p>
-        <img src="EDA_Background_Video.gif" alt="EDA Background GIF" class="mt-4 rounded-lg shadow-md">
-      </a>
-      <a href="https://github.com/becke198/College-Salary-Predictor" target="_blank" class="block bg-white p-6 rounded-lg shadow card-animate transition-all duration-300 transform hover:scale-105 glow-button">
-        <h4 class="text-2xl font-semibold text-gray-800">Salary Predictor App</h4>
-        <p class="text-gray-600">Created a Tkinter GUI to predict salaries from CSV data using Matplotlib. Enabled user interaction through a simple UI and visualized results with dynamic charts.</p>
-      </a>
-      <div class="bg-white p-6 rounded-lg shadow">
-        <h4 class="text-xl font-bold text-gray-800">Java Applications</h4>
-        <p class="text-gray-600">Developed 3 Java apps including a group collaboration tool and 14 mini-projects.</p>
+    <!-- Skills -->
+    <section id="skills" class="py-32 bg-white floating-section">
+      <div class="max-w-4xl mx-auto px-4">
+        <h3 class="text-5xl font-bold mb-12">📌 Technical Skills</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <p><strong>Languages:</strong> Java, Python (NumPy, pandas), R, SQL, MATLAB</p>
+          <p><strong>Tools:</strong> Git, VS Code, Eclipse, Excel, Tableau</p>
+          <p><strong>Certifications:</strong> Google Data Analytics (Coursera)</p>
+        </div>
       </div>
-    </div>
-    <div class="text-center mt-10">
-      <a href="/resume.pdf" target="_blank" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition glow-button">
-        View My Resume
-      </a>
-    </div>
-  </div>
-</section>
+    </section>
 
+    <!-- Projects -->
+    <section id="projects" class="py-32 floating-section">
+      <div class="max-w-4xl mx-auto px-4">
+        <h3 class="text-5xl font-bold mb-12">🎯 Key Projects</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <a href="https://github.com/becke198/college-majors-eda" target="_blank" class="block bg-white p-6 rounded-lg shadow card-animate transition-all duration-300 transform hover:scale-105 glow-button">
+            <h4 class="text-2xl font-semibold text-gray-800">College Major EDA (Python)</h4>
+            <p class="text-gray-600">Visualized salary and employment trends using pandas, seaborn, and Tableau. Explored correlations between major selection, income, and employability using public labor datasets.</p>
+            <img src="EDA_Background_Video.gif" alt="EDA Background GIF" class="mt-4 rounded-lg shadow-md">
+            <div class="mt-2 space-x-2">
+              <span class="bg-gray-200 text-sm rounded px-2 py-1">Python</span>
+              <span class="bg-gray-200 text-sm rounded px-2 py-1">Tableau</span>
+            </div>
+          </a>
+          <a href="https://github.com/becke198/College-Salary-Predictor" target="_blank" class="block bg-white p-6 rounded-lg shadow card-animate transition-all duration-300 transform hover:scale-105 glow-button">
+            <h4 class="text-2xl font-semibold text-gray-800">Salary Predictor App</h4>
+            <p class="text-gray-600">Created a Tkinter GUI to predict salaries from CSV data using Matplotlib. Enabled user interaction through a simple UI and visualized results with dynamic charts.</p>
+            <div class="mt-2 space-x-2">
+              <span class="bg-gray-200 text-sm rounded px-2 py-1">Python</span>
+              <span class="bg-gray-200 text-sm rounded px-2 py-1">Tkinter</span>
+            </div>
+          </a>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h4 class="text-xl font-bold text-gray-800">Java Applications</h4>
+            <p class="text-gray-600">Developed 3 Java apps including a group collaboration tool and 14 mini-projects.</p>
+            <div class="mt-2">
+              <span class="bg-gray-200 text-sm rounded px-2 py-1">Java</span>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-10">
+          <a href="/resume.pdf" target="_blank" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition glow-button">
+            View My Resume
+          </a>
+        </div>
+      </div>
+    </section>
 
     <!-- Experience -->
-  <section id="experience" class="py-20 bg-white floating-section">
-    <div class="max-w-4xl mx-auto px-4">
-      <h3 class="text-4xl font-bold mb-10">💼 Experience</h3>
-      <div class="mb-6">
-        <h4 class="text-xl font-bold">Consult Your Community – Purdue Chapter</h4>
-        <p class="text-base text-gray-600 italic">Business Analyst (Jan 2025 – Present)</p>
+    <section id="experience" class="py-20 bg-white floating-section">
+      <div class="max-w-4xl mx-auto px-4">
+        <h3 class="text-4xl font-bold mb-10">💼 Experience</h3>
+        <div class="mb-6">
+          <h4 class="text-xl font-bold">Consult Your Community – Purdue Chapter</h4>
+          <p class="text-base text-gray-600 italic">Business Analyst (Jan 2025 – Present)</p>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>Revamped nonprofit website with improved UX/UI and SEO</li>
+            <li>Integrated Facebook feed, iCalendar, and partner sections</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold">Centercourt Club and Sports</h4>
+          <p class="text-sm text-gray-600 italic text-opacity-90">Tennis Instructor (Jun 2021 – Aug 2024)</p>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>Led youth tennis classes; developed strong communication and leadership skills</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awards -->
+    <section id="awards" class="py-20 floating-section">
+      <div class="max-w-4xl mx-auto px-4">
+        <h3 class="text-3xl font-semibold mb-6">🏆 Awards & Activities</h3>
         <ul class="list-disc list-inside text-gray-700">
-          <li>Revamped nonprofit website with improved UX/UI and SEO</li>
-          <li>Integrated Facebook feed, iCalendar, and partner sections</li>
+          <li><strong>Purdue PIVOT Challenge (2nd Place):</strong> Finalist in entrepreneurship pitch competition</li>
+          <li><strong>IEEE Purdue:</strong> Active member; participated in workshops on AI and computing systems</li>
         </ul>
       </div>
-      <div>
-        <h4 class="text-xl font-bold">Centercourt Club and Sports</h4>
-        <p class="text-sm text-gray-600 italic text-opacity-90">Tennis Instructor (Jun 2021 – Aug 2024)</p>
-        <ul class="list-disc list-inside text-gray-700">
-          <li>Led youth tennis classes; developed strong communication and leadership skills</li>
-        </ul>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="py-20 bg-gray-100 floating-section">
+      <div class="max-w-4xl mx-auto px-4">
+        <h3 class="text-3xl font-semibold mb-6">🎓 Education</h3>
+        <p><strong>Purdue University, Honors College</strong> (Aug 2024 – May 2028)<br />
+        B.S. in Computer Engineering</p>
+        <p><strong>Relevant Coursework:</strong> CS-18000 (Java), ENGR-13000 (MATLAB, Python, Excel)</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Awards -->
-  <section id="awards" class="py-20 floating-section">
-    <div class="max-w-4xl mx-auto px-4">
-      <h3 class="text-3xl font-semibold mb-6">🏆 Awards & Activities</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li><strong>Purdue PIVOT Challenge (2nd Place):</strong> Finalist in entrepreneurship pitch competition</li>
-        <li><strong>IEEE Purdue:</strong> Active member; participated in workshops on AI and computing systems</li>
-      </ul>
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer class="py-16 text-center text-lg text-gray-500">
+      &copy; 2025 Andrew Becker.
+    </footer>
 
-  <!-- Education -->
-  <section id="education" class="py-20 bg-gray-100 floating-section">
-    <div class="max-w-4xl mx-auto px-4">
-      <h3 class="text-3xl font-semibold mb-6">🎓 Education</h3>
-      <p><strong>Purdue University, Honors College</strong> (Aug 2024 – May 2028)<br />
-      B.S. in Computer Engineering</p>
-      <p><strong>Relevant Coursework:</strong> CS-18000 (Java), ENGR-13000 (MATLAB, Python, Excel)</p>
-    </div>
-  </section>
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.15 });
 
-  <!-- Footer -->
-  <footer class="py-16 text-center text-lg text-gray-500">
-    &copy; 2025 Andrew Becker.
-  </footer>
-
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
+      document.querySelectorAll('.floating-section, .card-animate').forEach(el => {
+        observer.observe(el);
       });
-    }, { threshold: 0.15 });
-
-    document.querySelectorAll('.floating-section, .card-animate').forEach(el => {
-      observer.observe(el);
-    });
-  </script>
-
+    </script>
   </div>
 </body>
 </html>
