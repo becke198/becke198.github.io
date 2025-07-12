@@ -68,17 +68,17 @@
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section class="min-h-[80vh] flex items-center justify-center text-center px-4 pt-32 floating-section">
-    <div class="flex flex-col md:flex-row items-center justify-center gap-10 max-w-5xl mx-auto px-4"
-      <img src="andrew.jpg" alt="Andrew Becker" class="w-48 h-48 md:w-56 md:h-56 rounded-full shadow-xl object-cover border-4 border-white" />
-      <div class="text-center md:text-left">
+ <!-- Hero -->
+<section class="min-h-[80vh] flex items-center justify-center text-center px-4 pt-32 floating-section">
+  <div class="flex flex-col md:flex-row items-center justify-center gap-10 max-w-5xl mx-auto px-4">
+    <img src="andrew.jpg" alt="Andrew Becker" class="w-48 h-48 md:w-56 md:h-56 rounded-full shadow-xl object-cover border-4 border-white" />
+    <div class="text-center md:text-left">
       <h2 class="text-5xl md:text-6xl font-bold tracking-tight mb-4 leading-tight">Hi, I'm Andrew Becker</h2>
       <p class="text-lg text-gray-700">Computer Engineering @ Purdue University | GPA: 3.67</p>
-      </div>
     </div>
-    </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Skills -->
   <section id="skills" class="py-32 bg-white floating-section">
@@ -92,45 +92,33 @@
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="py-32 floating-section">
-    <div class="max-w-4xl mx-auto px-4">
-      <h3 class="text-5xl font-bold mb-12">🎯 Key Projects</h3>
-      <div class="grid md:grid-cols-2 gap-6">
-        <style>
-          .card-animate {
-            transform: translateY(40px);
-            opacity: 0;
-            transition: all 0.8s ease-in-out;
-          }
+<!-- Projects -->
+<section id="projects" class="py-32 floating-section">
+  <div class="max-w-4xl mx-auto px-4">
+    <h3 class="text-5xl font-bold mb-12">🎯 Key Projects</h3>
+    <div class="grid md:grid-cols-2 gap-6">
+      <a href="https://github.com/becke198/college-majors-eda" target="_blank" class="block bg-white p-6 rounded-lg shadow card-animate transition-all duration-300 transform hover:scale-105 glow-button">
+        <h4 class="text-2xl font-semibold text-gray-800">College Major EDA (Python)</h4>
+        <p class="text-gray-600">Visualized salary and employment trends using pandas, seaborn, and Tableau. Explored correlations between major selection, income, and employability using public labor datasets.</p>
+        <img src="EDA_Background_Video.gif" alt="EDA Background GIF" class="mt-4 rounded-lg shadow-md">
+      </a>
+      <a href="https://github.com/becke198/College-Salary-Predictor" target="_blank" class="block bg-white p-6 rounded-lg shadow card-animate transition-all duration-300 transform hover:scale-105 glow-button">
+        <h4 class="text-2xl font-semibold text-gray-800">Salary Predictor App</h4>
+        <p class="text-gray-600">Created a Tkinter GUI to predict salaries from CSV data using Matplotlib. Enabled user interaction through a simple UI and visualized results with dynamic charts.</p>
+      </a>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h4 class="text-xl font-bold text-gray-800">Java Applications</h4>
+        <p class="text-gray-600">Developed 3 Java apps including a group collaboration tool and 14 mini-projects.</p>
+      </div>
+    </div>
+    <div class="text-center mt-10">
+      <a href="/resume.pdf" target="_blank" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition glow-button">
+        View My Resume
+      </a>
+    </div>
+  </div>
+</section>
 
-          .card-animate.visible {
-            transform: translateY(0);
-            opacity: 1;
-          }
-        </style>
-        <a href="https://github.com/becke198/college-majors-eda" target="_blank" class="block bg-white p-6 rounded-lg shadow card-animate transition-all duration-300 transform hover:scale-105 glow-button">
-          <h4 class="text-2xl font-semibold text-gray-800">College Major EDA (Python)</h4>
-          <p class="text-gray-600">Visualized salary and employment trends using pandas, seaborn, and Tableau. Explored correlations between major selection, income, and employability using public labor datasets.</p>
-          <img src="EDA_Background_Video.gif" alt="EDA Background GIF" class="mt-4 rounded-lg shadow-md">
-        </div>
-        <a href="https://github.com/becke198/College-Salary-Predictor" target="_blank" class="block bg-white p-6 rounded-lg shadow card-animate transition-all duration-300 transform hover:scale-105 glow-button">
-          <h4 class="text-2xl font-semibold text-gray-800">Salary Predictor App</h4>
-          <p class="text-gray-600">Created a Tkinter GUI to predict salaries from CSV data using Matplotlib. Enabled user interaction through a simple UI and visualized results with dynamic charts.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h4 class="text-xl font-bold text-gray-800">Java Applications</h4>
-          <p class="text-gray-600">Developed 3 Java apps including a group collaboration tool and 14 mini-projects.</p>
-        </div>
-      </div>
-    </a>
-<a href="/resume.pdf" target="_blank" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition glow-button">
-      <div class="text-center mt-10">
-        <a href="/resume.pdf" target="_blank" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition glow-button">
-          View My Resume
-        </a>
-      </div>
-    </section>
 
     <!-- Experience -->
   <section id="experience" class="py-20 bg-white floating-section">
