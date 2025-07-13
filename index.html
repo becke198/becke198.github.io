@@ -59,8 +59,9 @@
           </svg>
         </button>
         <ul class="hidden md:flex space-x-6 text-sm">
-          <li><a href="#skills" class="hover:underline">Skills</a></li>
-          <li><a href="#projects" class="hover:underline">Projects</a></li>
+          <!-- Correct order -->
+        <li><a href="#projects" class="hover:underline">Projects</a></li>
+        <li><a href="#skills" class="hover:underline">Skills</a></li>
           <li><a href="#experience" class="hover:underline">Experience</a></li>
           <li><a href="#awards" class="hover:underline">Awards</a></li>
           <li><a href="#education" class="hover:underline">Education</a></li>
@@ -117,7 +118,7 @@
         </div>
       </div>
     </section>
-
+<!-- About -->
       <section id="about" class="py-16 bg-white floating-section">
   <div class="max-w-3xl mx-auto px-4 text-center">
     <h3 class="text-3xl font-semibold mb-4">👋 About Me</h3>
@@ -127,65 +128,7 @@
   </div>
 </section>
 
-
-    <!-- Skills -->
-    <section id="skills" class="py-32 bg-white floating-section">
-      <div class="max-w-4xl mx-auto px-4">
-        <h3 class="text-5xl font-bold mb-12">📌 Technical Skills</h3>
-        <div class="grid md:grid-cols-2 gap-6">
-  <div class="flex items-center space-x-3">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-6 h-6" alt="Java" />
-    <span>Java</span>
-  </div>
-  <div class="flex items-center space-x-3">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-6 h-6" alt="Python" />
-    <span>Python (NumPy, pandas)</span>
-  </div>
-  <div class="flex items-center space-x-3">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" class="w-6 h-6" alt="R" />
-    <span>R</span>
-  </div>
-  <div class="flex items-center space-x-3">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-6 h-6" alt="SQL" />
-    <span>SQL</span>
-  </div>
-  <div class="flex items-center space-x-3">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" class="w-6 h-6" alt="MATLAB" />
-    <span>MATLAB</span>
-  </div>
-  <div class="flex items-center space-x-3">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-6 h-6" alt="Git" />
-    <span>Git</span>
-  </div>
-  <div class="flex items-center space-x-3">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" class="w-6 h-6" alt="VS Code" />
-    <span>VS Code</span>
-  </div>
-  <div class="flex items-center space-x-3">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg" class="w-6 h-6" alt="Eclipse" />
-    <span>Eclipse</span>
-  </div>
-  <div class="flex items-center space-x-3">
-  <img src="https://img.icons8.com/color/48/microsoft-excel-2019--v1.png" class="w-6 h-6" alt="Excel" />
-  <span>Excel</span>
-</div>
-
-
-  <div class="flex items-center space-x-3">
-    <img src="https://img.icons8.com/color/48/tableau-software.png" class="w-6 h-6" alt="Tableau" />
-    <span>Tableau</span>
-  </div>
-  <div class="flex items-center space-x-3">
-  <img src="https://img.icons8.com/color/48/000000/google-logo.png" class="w-6 h-6" alt="Google" />
-  <span>Certifications: Google Data Analytics (Coursera)</span>
-</div>
-
-</div>
-
-      </div>
-    </section>
-
-    <!-- Featured Projects Carousel -->
+      <!-- Featured Projects Carousel -->
 <section id="featured-projects" class="py-32 bg-gray-50 floating-section">
   <div class="max-w-5xl mx-auto px-4">
     <h3 class="text-5xl font-bold mb-12 text-center">🚀 Featured Projects</h3>
@@ -250,32 +193,67 @@
 </section>
 
 
-    <!-- Projects -->
-    <section id="projects" class="py-32 floating-section">
+
+    <!-- Skills -->
+    <section id="skills" class="py-32 bg-white floating-section">
       <div class="max-w-4xl mx-auto px-4">
-        <h3 class="text-4xl font-bold mb-12">📂 More Projects</h3>
-
-       <div class="grid md:grid-cols-2 gap-6">
-
- <!-- Flying Spaceship Project Card -->
- <a href="https://github.com/becke198/becke198.github.io/blob/main/Project%201%20Report.pdf" target="_blank"
-   class="block bg-white p-6 rounded-lg shadow card-animate transition-all duration-300 transform hover:scale-105 glow-button">
-  <h4 class="text-2xl font-semibold text-gray-800">Flying Spaceship Project</h4>
-  <p class="text-gray-600 mt-2">Designed and implemented a spaceship model with real-time control simulation. Tracked the acceleration data to simulate the best techniques to land a rocket.</p>
-  <img src="Flying Helicopter Project.gif" alt="Model Spaceship GIF" class="mt-4 rounded-lg shadow-md">
-  <div class="mt-3 space-x-2">
-    <span class="bg-gray-200 text-sm rounded px-2 py-1">Hardware</span>
-    <span class="bg-gray-200 text-sm rounded px-2 py-1">Control Systems</span>
-    <span class="bg-blue-100 text-blue-700 text-sm font-medium px-2 py-1 rounded">Project Report PDF ↗</span>
+        <h3 class="text-5xl font-bold mb-12">📌 Technical Skills</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+  <div class="flex items-center space-x-3">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-6 h-6" alt="Java" />
+    <span>Java</span>
   </div>
-</a>
+  <div class="flex items-center space-x-3">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-6 h-6" alt="Python" />
+    <span>Python (NumPy, pandas)</span>
+  </div>
+  <div class="flex items-center space-x-3">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" class="w-6 h-6" alt="R" />
+    <span>R</span>
+  </div>
+  <div class="flex items-center space-x-3">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-6 h-6" alt="SQL" />
+    <span>SQL</span>
+  </div>
+  <div class="flex items-center space-x-3">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" class="w-6 h-6" alt="MATLAB" />
+    <span>MATLAB</span>
+  </div>
+  <div class="flex items-center space-x-3">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-6 h-6" alt="Git" />
+    <span>Git</span>
+  </div>
+  <div class="flex items-center space-x-3">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" class="w-6 h-6" alt="VS Code" />
+    <span>VS Code</span>
+  </div>
+  <div class="flex items-center space-x-3">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg" class="w-6 h-6" alt="Eclipse" />
+    <span>Eclipse</span>
+  </div>
+  <div class="flex items-center space-x-3">
+  <img src="https://img.icons8.com/color/48/microsoft-excel-2019--v1.png" class="w-6 h-6" alt="Excel" />
+  <span>Excel</span>
+</div>
 
+
+  <div class="flex items-center space-x-3">
+    <img src="https://img.icons8.com/color/48/tableau-software.png" class="w-6 h-6" alt="Tableau" />
+    <span>Tableau</span>
+  </div>
+  <div class="flex items-center space-x-3">
+  <img src="https://img.icons8.com/color/48/000000/google-logo.png" class="w-6 h-6" alt="Google" />
+  <span>Certifications: Google Data Analytics (Coursera)</span>
+</div>
 
 </div>
 
-        
       </div>
     </section>
+
+    
+
+  
 
     <!-- Experience -->
     <section id="experience" class="py-20 bg-white floating-section">
@@ -319,6 +297,22 @@
       </div>
     </section>
 
+<!-- Education -->
+    <section id="education" class="py-20 bg-gray-100 floating-section">
+      <div class="max-w-4xl mx-auto px-4">
+        <h3 class="text-3xl font-semibold mb-6">🎓 Education</h3>
+       <div class="flex items-start gap-4">
+  <img src="https://sportslogohistory.com/wp-content/uploads/2022/01/purdue_boilermakers_2012-pres.png" alt="Purdue Logo" class="w-16 h-10 object-contain" />
+  <div>
+    <p><strong>Purdue University, Honors College</strong> (Aug 2024 – May 2028)<br />
+    B.S. in Computer Engineering</p>
+    <p class="mt-2"><strong>Relevant Coursework:</strong> CS-18000 (Java), ENGR-13000 (MATLAB, Python, Excel)</p>
+  </div>
+</div>
+
+      </div>
+    </section>
+      
     <!-- Awards -->
     <section id="awards" class="py-20 floating-section">
       <div class="max-w-4xl mx-auto px-4">
@@ -344,28 +338,41 @@
       </div>
     </section>
 
-    <!-- Education -->
-    <section id="education" class="py-20 bg-gray-100 floating-section">
+    
+
+        <!-- More Projects -->
+    <section id="projects" class="py-32 floating-section">
       <div class="max-w-4xl mx-auto px-4">
-        <h3 class="text-3xl font-semibold mb-6">🎓 Education</h3>
-       <div class="flex items-start gap-4">
-  <img src="https://sportslogohistory.com/wp-content/uploads/2022/01/purdue_boilermakers_2012-pres.png" alt="Purdue Logo" class="w-16 h-10 object-contain" />
-  <div>
-    <p><strong>Purdue University, Honors College</strong> (Aug 2024 – May 2028)<br />
-    B.S. in Computer Engineering</p>
-    <p class="mt-2"><strong>Relevant Coursework:</strong> CS-18000 (Java), ENGR-13000 (MATLAB, Python, Excel)</p>
+        <h3 class="text-4xl font-bold mb-12">📂 More Projects</h3>
+
+       <div class="grid md:grid-cols-2 gap-6">
+
+ <!-- Flying Spaceship Project Card -->
+ <a href="https://github.com/becke198/becke198.github.io/blob/main/Project%201%20Report.pdf" target="_blank"
+   class="block bg-white p-6 rounded-lg shadow card-animate transition-all duration-300 transform hover:scale-105 glow-button">
+  <h4 class="text-2xl font-semibold text-gray-800">Flying Spaceship Project</h4>
+  <p class="text-gray-600 mt-2">Designed and implemented a spaceship model with real-time control simulation. Tracked the acceleration data to simulate the best techniques to land a rocket.</p>
+  <img src="Flying Helicopter Project.gif" alt="Model Spaceship GIF" class="mt-4 rounded-lg shadow-md">
+  <div class="mt-3 space-x-2">
+    <span class="bg-gray-200 text-sm rounded px-2 py-1">Hardware</span>
+    <span class="bg-gray-200 text-sm rounded px-2 py-1">Control Systems</span>
+    <span class="bg-blue-100 text-blue-700 text-sm font-medium px-2 py-1 rounded">Project Report PDF ↗</span>
   </div>
+</a>
+
+
 </div>
 
+        
       </div>
     </section>
-
-    <!-- Footer -->
+</main>
+    
+<!-- Footer -->
     <footer class="py-16 text-center text-lg text-gray-500">
       &copy; 2025 Andrew Becker.
-      </main>
+      
     </footer>
-
     <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
