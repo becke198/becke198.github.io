@@ -48,7 +48,8 @@
 </head>
 <body class="bg-white text-gray-900 scroll-smooth relative">
   <div class="relative z-10">
-    <!-- Navigation -->
+    <main>
+      <!-- Navigation -->
     <header class="sticky top-0 bg-white shadow z-50">
       <nav class="max-w-5xl mx-auto flex justify-between items-center p-4">
         <h1 class="text-2xl md:text-3xl font-bold tracking-tight">Andrew Becker</h1>
@@ -95,11 +96,10 @@
             </a>
             <a href="https://becke198.github.io/resume.pdf" target="_blank"
    onclick="gtag('event', 'resume_download', { event_category: 'engagement', event_label: 'Resume PDF Click' })"
-   class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition glow-button">
-   📄 View My Resume
-</a> <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M13 7h-2v6h2V7zM9 7H7v6h2V7z"/><path fill-rule="evenodd" d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm10 2H5v10h10V5z" clip-rule="evenodd"/></svg>
-              Resume
-            </a>
+   class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition glow-button">
+   <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="..."/></svg>
+   View My Resume
+</a>
             <a href="https://github.com/becke198" target="_blank" class="inline-flex items-center px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 glow-button">
               <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.371 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.113.793-.26.793-.577v-2.27c-3.338.726-4.033-1.415-4.033-1.415-.547-1.389-1.336-1.758-1.336-1.758-1.092-.745.083-.729.083-.729 1.205.084 1.838 1.237 1.838 1.237 1.073 1.834 2.813 1.304 3.502.997.108-.778.419-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.93 0-1.31.467-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 013.004-.404c1.018.004 2.044.138 3.004.404 2.291-1.553 3.297-1.23 3.297-1.23.655 1.653.243 2.874.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-2.804 5.624-5.475 5.921.43.372.814 1.103.814 2.222v3.293c0 .32.192.694.801.576C20.565 21.796 24 17.298 24 12c0-6.627-5.373-12-12-12z"/></svg>
               GitHub
@@ -298,21 +298,28 @@
     <!-- Footer -->
     <footer class="py-16 text-center text-lg text-gray-500">
       &copy; 2025 Andrew Becker.
+      </main>
     </footer>
 
     <script>
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      }, { threshold: 0.15 });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
 
-      document.querySelectorAll('.floating-section, .card-animate').forEach(el => {
-        observer.observe(el);
-      });
-    </script>
-  </div>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.floating-section, .card-animate').forEach(el => {
+      observer.observe(el);
+      if (el.getBoundingClientRect().top < window.innerHeight * 0.85) {
+        el.classList.add('visible');
+      }
+    });
+  });
+</script>
+
+  </div> <!-- Close .relative z-10 -->
 </body>
 </html>
