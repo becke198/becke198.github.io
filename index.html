@@ -148,6 +148,45 @@
     <h3 class="text-5xl font-bold mb-12 text-center"> Featured Projects</h3>
     <div class="flex overflow-x-auto space-x-6 pb-4 snap-x">
 
+      <!-- FPGA Order Book Engine -->
+      <div class="min-w-[300px] max-w-xs bg-white p-4 rounded-lg shadow-md snap-start card-animate transform transition-all duration-300 hover:scale-105">
+        <h4 class="text-xl font-semibold text-gray-800">FPGA Order Book Engine</h4>
+        <p class="text-sm text-gray-600 mt-1">
+          Fully pipelined, synthesizable NASDAQ ITCH 5.0 market data processing engine with sub-microsecond (&lt;200ns) deterministic latency at 200 MHz. Multi-stage FSM parser, dual-sided Level 2 order book with BRAM-based hash table and insertion-sort pipeline, Q16.16 fixed-point DSP48E1 arithmetic for real-time mid-price/spread/EMA, and differential verification against a Python golden model.
+        </p>
+        <div class="mt-3 space-x-2 space-y-2">
+          <span class="bg-gray-200 text-sm rounded px-2 py-1">SystemVerilog</span>
+          <span class="bg-gray-200 text-sm rounded px-2 py-1">Vivado</span>
+          <span class="bg-gray-200 text-sm rounded px-2 py-1">Artix-7 FPGA</span>
+        </div>
+      </div>
+
+      <!-- FPGA Lock-In Amplifier -->
+      <div class="min-w-[300px] max-w-xs bg-white p-4 rounded-lg shadow-md snap-start card-animate transform transition-all duration-300 hover:scale-105">
+        <h4 class="text-xl font-semibold text-gray-800">FPGA Lock-In Amplifier (DSP & RHBD)</h4>
+        <p class="text-sm text-gray-600 mt-1">
+          Radiation-hardened lock-in amplifier core with DDS reference generation, pipelined mixer, and a CIC/compensation/FIR downsampling chain. Applied RHBD via TMR on critical FSMs and Hamming ECC on config registers, verified with a UVM testbench injecting AWGN and validated on a DE10-Lite FPGA.
+        </p>
+        <div class="mt-3 space-x-2 space-y-2">
+          <span class="bg-gray-200 text-sm rounded px-2 py-1">SystemVerilog</span>
+          <span class="bg-gray-200 text-sm rounded px-2 py-1">UVM</span>
+          <span class="bg-gray-200 text-sm rounded px-2 py-1">APB</span>
+          <span class="bg-gray-200 text-sm rounded px-2 py-1">AMD Vivado</span>
+        </div>
+      </div>
+
+      <!-- Matrix Multiply Accelerator -->
+      <div class="min-w-[300px] max-w-xs bg-white p-4 rounded-lg shadow-md snap-start card-animate transform transition-all duration-300 hover:scale-105">
+        <h4 class="text-xl font-semibold text-gray-800">Matrix Multiply Accelerator (ASIC Design)</h4>
+        <p class="text-sm text-gray-600 mt-1">
+          TPU-style hardware accelerator using an 8x8 systolic array for weight-stationary inference. Custom AHB subordinate interface supporting regular and burst R/W transactions, FSM controller logic, and double-buffered SRAM banks, achieving under 75 clock cycles inference latency with pipelined MAC datapaths.
+        </p>
+        <div class="mt-3 space-x-2 space-y-2">
+          <span class="bg-gray-200 text-sm rounded px-2 py-1">SystemVerilog</span>
+          <span class="bg-gray-200 text-sm rounded px-2 py-1">SoC Architecture</span>
+        </div>
+      </div>
+
       <!-- Elevator Controller ASIC Project -->
 <a href="https://github.com/BenjaminSisk/ElevatorControllerASIC" target="_blank"
    class="min-w-[300px] max-w-xs bg-white p-4 rounded-lg shadow-md snap-start card-animate transform transition-all duration-300 hover:scale-105 glow-button">
