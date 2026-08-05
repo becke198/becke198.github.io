@@ -95,7 +95,7 @@
 
   <div class="w-full">
     <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-4 leading-tight">Hi, I'm Andrew Becker</h2>
-    <p class="text-base sm:text-lg text-gray-700">Computer Engineering @ Purdue University | GPA: 3.67</p>
+    <p class="text-base sm:text-lg text-gray-700">Computer Engineering @ Purdue University</p>
     <p class="text-sm sm:text-md text-gray-600 mt-4">
       I'm passionate about building efficient systems at the intersection of hardware and AI. Currently seeking Summer 2026 internships in VLSI, AI/ML, or Software Engineering.
     </p>
@@ -150,6 +150,25 @@
 
       <!-- FPGA Order Book Engine -->
       <div class="min-w-[300px] max-w-xs bg-white p-4 rounded-lg shadow-md snap-start card-animate transform transition-all duration-300 hover:scale-105">
+        <svg viewBox="0 0 300 160" class="rounded mb-3 w-full h-40 object-cover bg-gray-900">
+          <rect width="300" height="160" fill="#0f172a"/>
+          <text x="12" y="20" fill="#94a3b8" font-family="monospace" font-size="10">BID</text>
+          <text x="230" y="20" fill="#94a3b8" font-family="monospace" font-size="10">ASK</text>
+          <rect x="12" y="26" width="60" height="8" fill="#16a34a"/>
+          <rect x="12" y="38" width="90" height="8" fill="#16a34a"/>
+          <rect x="12" y="50" width="45" height="8" fill="#16a34a"/>
+          <rect x="12" y="62" width="75" height="8" fill="#16a34a"/>
+          <rect x="12" y="74" width="30" height="8" fill="#16a34a"/>
+          <rect x="230" y="26" width="55" height="8" fill="#dc2626" transform="translate(-55,0)" x2="0"/>
+          <rect x="175" y="26" width="55" height="8" fill="#dc2626"/>
+          <rect x="150" y="38" width="80" height="8" fill="#dc2626"/>
+          <rect x="195" y="50" width="35" height="8" fill="#dc2626"/>
+          <rect x="165" y="62" width="65" height="8" fill="#dc2626"/>
+          <rect x="205" y="74" width="25" height="8" fill="#dc2626"/>
+          <line x1="150" y1="10" x2="150" y2="150" stroke="#334155" stroke-width="1"/>
+          <text x="12" y="140" fill="#facc15" font-family="monospace" font-size="9">200MHz | &lt;200ns</text>
+          <path d="M12,110 L40,105 L60,115 L85,95 L110,100 L135,88 L160,102 L185,90 L210,98 L235,80 L260,92" fill="none" stroke="#38bdf8" stroke-width="2"/>
+        </svg>
         <h4 class="text-xl font-semibold text-gray-800">FPGA Order Book Engine</h4>
         <p class="text-sm text-gray-600 mt-1">
           Fully pipelined, synthesizable NASDAQ ITCH 5.0 market data processing engine with sub-microsecond (&lt;200ns) deterministic latency at 200 MHz. Multi-stage FSM parser, dual-sided Level 2 order book with BRAM-based hash table and insertion-sort pipeline, Q16.16 fixed-point DSP48E1 arithmetic for real-time mid-price/spread/EMA, and differential verification against a Python golden model.
@@ -163,6 +182,14 @@
 
       <!-- FPGA Lock-In Amplifier -->
       <div class="min-w-[300px] max-w-xs bg-white p-4 rounded-lg shadow-md snap-start card-animate transform transition-all duration-300 hover:scale-105">
+        <svg viewBox="0 0 300 160" class="rounded mb-3 w-full h-40 object-cover bg-gray-900">
+          <rect width="300" height="160" fill="#0f172a"/>
+          <path d="M0,50 Q15,20 30,50 T60,50 T90,50 T120,50 T150,50 T180,50 T210,50 T240,50 T270,50 T300,50" fill="none" stroke="#f97316" stroke-width="2"/>
+          <path d="M0,100 Q7,60 15,100 T30,100 T45,100 T60,100 T75,100 T90,100 T105,100 T120,100 T135,100 T150,100 T165,100 T180,100 T195,100 T210,100 T225,100 T240,100 T255,100 T270,100 T285,100 T300,100" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.8"/>
+          <line x1="0" y1="125" x2="300" y2="125" stroke="#334155" stroke-width="1"/>
+          <path d="M0,125 L30,125 L30,118 L60,118 L60,132 L90,132 L90,118 L120,118 L120,132 L150,132 L150,118 L180,118 L180,132 L210,132 L210,118 L240,118 L240,132 L270,132 L270,125 L300,125" fill="none" stroke="#22c55e" stroke-width="1.5"/>
+          <text x="12" y="150" fill="#94a3b8" font-family="monospace" font-size="9">DDS · Mixer · CIC/FIR · TMR</text>
+        </svg>
         <h4 class="text-xl font-semibold text-gray-800">FPGA Lock-In Amplifier (DSP & RHBD)</h4>
         <p class="text-sm text-gray-600 mt-1">
           Radiation-hardened lock-in amplifier core with DDS reference generation, pipelined mixer, and a CIC/compensation/FIR downsampling chain. Applied RHBD via TMR on critical FSMs and Hamming ECC on config registers, verified with a UVM testbench injecting AWGN and validated on a DE10-Lite FPGA.
@@ -177,6 +204,30 @@
 
       <!-- Matrix Multiply Accelerator -->
       <div class="min-w-[300px] max-w-xs bg-white p-4 rounded-lg shadow-md snap-start card-animate transform transition-all duration-300 hover:scale-105">
+        <svg viewBox="0 0 300 160" class="rounded mb-3 w-full h-40 object-cover bg-gray-900">
+          <rect width="300" height="160" fill="#0f172a"/>
+          <g stroke="#334155" stroke-width="1">
+            <line x1="60" y1="20" x2="60" y2="140"/><line x1="100" y1="20" x2="100" y2="140"/>
+            <line x1="140" y1="20" x2="140" y2="140"/><line x1="180" y1="20" x2="180" y2="140"/>
+            <line x1="220" y1="20" x2="220" y2="140"/><line x1="260" y1="20" x2="260" y2="140"/>
+            <line x1="40" y1="30" x2="280" y2="30"/><line x1="40" y1="55" x2="280" y2="55"/>
+            <line x1="40" y1="80" x2="280" y2="80"/><line x1="40" y1="105" x2="280" y2="105"/>
+            <line x1="40" y1="130" x2="280" y2="130"/>
+          </g>
+          <g fill="#38bdf8">
+            <circle cx="60" cy="30" r="6"/><circle cx="100" cy="30" r="6"/><circle cx="140" cy="30" r="6"/>
+            <circle cx="180" cy="30" r="6"/><circle cx="220" cy="30" r="6"/><circle cx="260" cy="30" r="6"/>
+            <circle cx="60" cy="55" r="6"/><circle cx="100" cy="55" r="6"/><circle cx="140" cy="55" r="6"/>
+            <circle cx="180" cy="55" r="6"/><circle cx="220" cy="55" r="6"/><circle cx="260" cy="55" r="6"/>
+            <circle cx="60" cy="80" r="6"/><circle cx="100" cy="80" r="6"/><circle cx="140" cy="80" r="6"/>
+            <circle cx="180" cy="80" r="6"/><circle cx="220" cy="80" r="6"/><circle cx="260" cy="80" r="6"/>
+            <circle cx="60" cy="105" r="6"/><circle cx="100" cy="105" r="6"/><circle cx="140" cy="105" r="6"/>
+            <circle cx="180" cy="105" r="6"/><circle cx="220" cy="105" r="6"/><circle cx="260" cy="105" r="6"/>
+            <circle cx="60" cy="130" r="6"/><circle cx="100" cy="130" r="6"/><circle cx="140" cy="130" r="6"/>
+            <circle cx="180" cy="130" r="6"/><circle cx="220" cy="130" r="6"/><circle cx="260" cy="130" r="6"/>
+          </g>
+          <text x="12" y="148" fill="#facc15" font-family="monospace" font-size="9">8x8 Systolic Array</text>
+        </svg>
         <h4 class="text-xl font-semibold text-gray-800">Matrix Multiply Accelerator (ASIC Design)</h4>
         <p class="text-sm text-gray-600 mt-1">
           TPU-style hardware accelerator using an 8x8 systolic array for weight-stationary inference. Custom AHB subordinate interface supporting regular and burst R/W transactions, FSM controller logic, and double-buffered SRAM banks, achieving under 75 clock cycles inference latency with pipelined MAC datapaths.
